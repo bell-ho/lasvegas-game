@@ -126,4 +126,3 @@ pm2 start index.js --name "vegas-server"
 ## 라이선스
 
 이 프로젝트는 학습 및 포트폴리오 목적으로 제작되었습니다.
-원작 보드게임 "Las Vegas"의 저작권은 alea/Ravensburger에 있습니다.
