@@ -19,6 +19,16 @@
 
 > 4라운드 종료 후 가장 많은 돈을 모은 플레이어가 승리!
 
+## 스크린샷
+
+| 로비 | 방 만들기 |
+|:---:|:---:|
+| ![로비](screenshots/lobby.png) | ![방만들기](screenshots/create-room.png) |
+
+| 대기실 | 게임 플레이 |
+|:---:|:---:|
+| ![대기실](screenshots/waiting.png) | ![게임](screenshots/game.png) |
+
 ---
 
 ## 기술 스택
