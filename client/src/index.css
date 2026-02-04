@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f0f23 100%);
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ffd700 0%, #ff6b6b 100%);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ffea00 0%, #ff8a8a 100%);
+}
+
+/* 접근성: 포커스 인디케이터 */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+}
+
+/* 접근성: 고대비 모드 */
+body.high-contrast {
+  --text-primary: #ffffff;
+  --text-secondary: #e0e0e0;
+  --bg-contrast: #000000;
+}
+
+body.high-contrast * {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.high-contrast button,
+body.high-contrast [role="button"] {
+  border: 2px solid currentColor !important;
+}
+
+/* 접근성: 색맹 모드 - 패턴으로 구분 */
+body.color-blind-mode [data-player-color="red"]::before { content: "R "; }
+body.color-blind-mode [data-player-color="blue"]::before { content: "B "; }
+body.color-blind-mode [data-player-color="green"]::before { content: "G "; }
+body.color-blind-mode [data-player-color="orange"]::before { content: "O "; }
+body.color-blind-mode [data-player-color="purple"]::before { content: "P "; }
+body.color-blind-mode [data-player-color="yellow"]::before { content: "Y "; }
+
+/* 접근성: 모션 줄이기 */
+body.reduce-motion *,
+body.reduce-motion *::before,
+body.reduce-motion *::after {
+  animation-duration: 0.01ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.01ms !important;
+}
+
+/* 시스템 설정에 따른 모션 감소 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* 시스템 고대비 모드 */
+@media (prefers-contrast: high) {
+  body {
+    --text-primary: #ffffff;
+    background: #000000;
+  }
+}

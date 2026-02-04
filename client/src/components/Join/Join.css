@@ -1,0 +1,125 @@
+html, body {
+    font-family: 'Outfit', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+#root {
+    height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.joinOuterContainer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    min-height: 100vh;
+    align-items: center;
+    padding: 2rem;
+}
+
+.joinInnerContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.joinInput {
+    border: none;
+    border-radius: 12px;
+    padding: 16px 20px;
+    width: 300px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    color: #1a1a2e;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.joinInput:focus {
+    outline: none;
+    box-shadow: 0 4px 20px rgba(255, 215, 0, 0.4);
+    transform: translateY(-2px);
+}
+
+.joinInput::placeholder {
+    color: #666;
+}
+
+select.joinInput {
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23666' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+}
+
+.heading {
+    color: #ffd700;
+    font-size: 2.5em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.button {
+    color: #1a1a2e !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: linear-gradient(135deg, #ffd700 0%, #ffaa00 100%);
+    padding: 16px 32px;
+    border-radius: 12px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(255, 215, 0, 0.5);
+    background: linear-gradient(135deg, #ffea00 0%, #ffd700 100%);
+}
+
+.button:active {
+    transform: translateY(-1px);
+}
+
+.mt-20 {
+    margin-top: 16px;
+}
+
+.divider {
+    border-left: 1px solid rgba(255, 215, 0, 0.3);
+    margin: 0 16px;
+    height: 250px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .joinOuterContainer {
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .joinInnerContainer {
+        width: 100%;
+    }
+
+    .joinInput {
+        width: 100%;
+    }
+}
+
+button:focus {
+    outline: 0;
+}

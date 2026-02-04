@@ -1,0 +1,35 @@
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1rem;
+  padding: 2rem;
+  gap: 24px;
+  min-width: 350px;
+}
+
+.activeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
+  gap: 12px;
+  font-weight: 600;
+}
+
+@media (min-width: 320px) and (max-width: 1200px) {
+  .textContainer {
+    width: 100%;
+    min-width: unset;
+  }
+  .activeContainer {
+    display: flex;
+    align-items: center;
+    margin-left: 0;
+    width: 100%;
+  }
+}
